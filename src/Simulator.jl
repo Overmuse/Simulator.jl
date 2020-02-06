@@ -20,19 +20,19 @@ include("statistics.jl")
 
 function run!(s::AbstractStrategy, b::AbstractBrokerage, m::AbstractMarket)
     params = initialize!(s, b, m)
-    while should_run(s, b, m)
+    while should_run(s, b, m, params)
         if is_preopen(m)
-            process_preopen!(s, b, m)
+            process_preopen!(s, b, m, params)
         elseif is_opening(m)
-            process_open!(s, b, m)
+            process_open!(s, b, m, params)
         elseif is_open(m)
-            process!(s, b, m)
+            process!(s, b, m, params)
         elseif is_closing(m)
-            process_close!(s, b, m)
+            process_close!(s, b, m, params)
         elseif is_closed(m)
-            process_postclose!(s, b, m)
+            process_postclose!(s, b, m, params)
         end
-        update_statistics!(s, b, m)
+        update_statistics!(s, b, m, params)
     end
 end
 
