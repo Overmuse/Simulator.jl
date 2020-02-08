@@ -2,7 +2,15 @@ module Simulator
 
 using OnlineStats
 using Brokerages: AbstractBrokerage
-using Markets: AbstractMarket, is_preopen, is_opening, is_open, is_closing, is_closed
+using Markets:
+    AbstractMarket,
+    is_preopen,
+    is_opening,
+    is_open,
+    is_closing,
+    is_closed,
+    reset!
+    
 export
     AbstractStrategy,
     initialize!,
@@ -19,6 +27,7 @@ include("strategy.jl")
 include("statistics.jl")
 
 function run!(s::AbstractStrategy, b::AbstractBrokerage, m::AbstractMarket)
+    reset!(m)
     params = initialize!(s, b, m)
     while should_run(s, b, m, params)
         if is_preopen(m)
@@ -34,6 +43,7 @@ function run!(s::AbstractStrategy, b::AbstractBrokerage, m::AbstractMarket)
         end
         update_statistics!(s, b, m, params)
     end
+    return params.statistics
 end
 
 end # module
