@@ -1,6 +1,5 @@
 module Simulator
 
-using OnlineStats
 using Brokerages: AbstractBrokerage
 using Markets:
     AbstractMarket,
@@ -10,7 +9,7 @@ using Markets:
     is_closing,
     is_closed,
     reset!
-    
+
 export
     AbstractStrategy,
     initialize!,
