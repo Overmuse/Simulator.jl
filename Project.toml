@@ -1,11 +1,12 @@
 name = "Simulator"
 uuid = "7a103a07-b92e-4e08-9609-032240f69494"
 authors = ["Sebastian Rollen <rollenseb@gmail.com>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 Brokerages = "17266b6e-feb9-49b2-89f6-6dff26db6053"
 Markets = "e289261d-1a32-4d56-985b-5cdfc675b408"
+TradingBase = "1e56c13b-5444-4379-9737-7aa7ad39eab5"
 
 [compat]
 Brokerages = "0.1"

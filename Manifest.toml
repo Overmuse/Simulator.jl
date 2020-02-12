@@ -10,10 +10,16 @@ uuid = "b99e7846-7c00-51b0-8f62-c81ae34c0232"
 version = "0.5.8"
 
 [[Brokerages]]
-deps = ["Markets", "Polygon", "TradingBase", "UUIDs"]
-path = "../Brokerages.jl"
+deps = ["Markets", "TradingBase", "UUIDs"]
+git-tree-sha1 = "f82f9fb835dde7590e808f656b04d894579a8ac9"
 uuid = "17266b6e-feb9-49b2-89f6-6dff26db6053"
-version = "0.1.7"
+version = "0.1.8"
+
+[[BusinessDays]]
+deps = ["Dates"]
+git-tree-sha1 = "9a331eb6799bfe6eb5c72026049acb283c1d19dc"
+uuid = "4f18b42c-503e-5345-9536-bb0f25fc7038"
+version = "0.9.6"
 
 [[CSV]]
 deps = ["CategoricalArrays", "DataFrames", "Dates", "FilePathsBase", "Mmap", "Parsers", "PooledArrays", "Tables", "Unicode", "WeakRefStrings"]
@@ -28,10 +34,10 @@ uuid = "324d7699-5711-5eae-9e2f-1d82baa6b597"
 version = "0.7.7"
 
 [[Compat]]
-deps = ["Base64", "Dates", "DelimitedFiles", "Distributed", "InteractiveUtils", "LibGit2", "Libdl", "LinearAlgebra", "Markdown", "Mmap", "Pkg", "Printf", "REPL", "Random", "Serialization", "SharedArrays", "Sockets", "SparseArrays", "Statistics", "Test", "UUIDs", "Unicode"]
-git-tree-sha1 = "3819f476b6b37ef8ea837070ed831b4ebadfa1e9"
+deps = ["Base64", "Dates", "DelimitedFiles", "Distributed", "InteractiveUtils", "LibGit2", "Libdl", "LinearAlgebra", "Markdown", "Mmap", "Pkg", "Printf", "REPL", "Random", "SHA", "Serialization", "SharedArrays", "Sockets", "SparseArrays", "Statistics", "Test", "UUIDs", "Unicode"]
+git-tree-sha1 = "a4839bd26e3e7f4869a4cf6c31f9f93f47aac7c5"
 uuid = "34da2185-b29b-5c13-b0c7-acf172513d20"
-version = "3.2.0"
+version = "3.5.0"
 
 [[DataAPI]]
 git-tree-sha1 = "674b67f344687a88310213ddfa8a2b3c76cc4252"
@@ -129,9 +135,9 @@ uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
 
 [[Markets]]
 deps = ["CSV", "DataFrames", "Dates", "HTTP", "Polygon", "ProgressMeter", "TradingBase"]
-path = "../Markets.jl"
+git-tree-sha1 = "cef1da7a2bb5e914573d303164497a1c897aac9c"
 uuid = "e289261d-1a32-4d56-985b-5cdfc675b408"
-version = "0.5.0"
+version = "0.5.1"
 
 [[MbedTLS]]
 deps = ["BinaryProvider", "Dates", "Libdl", "Random", "Sockets"]
@@ -166,7 +172,7 @@ uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 
 [[Polygon]]
 deps = ["HTTP", "JSON", "ProgressMeter"]
-path = "../Polygon.jl"
+git-tree-sha1 = "27d6a52b4ec0dc99f2da232c38f7998743cc33c8"
 uuid = "6c90dff6-b80f-4bd2-aa9c-319c6ebead32"
 version = "1.0.0"
 
@@ -244,10 +250,10 @@ deps = ["Distributed", "InteractiveUtils", "Logging", "Random"]
 uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [[TradingBase]]
-deps = ["UUIDs"]
-git-tree-sha1 = "78b2925eaeea58f5dfd1b11af8a7a0cca70d1ba6"
+deps = ["BusinessDays", "Dates", "UUIDs"]
+git-tree-sha1 = "e2950a379a92b03b725fea0fb69ec49996458d9b"
 uuid = "1e56c13b-5444-4379-9737-7aa7ad39eab5"
-version = "0.1.4"
+version = "0.2.1"
 
 [[UUIDs]]
 deps = ["Random", "SHA"]
