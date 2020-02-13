@@ -1,7 +1,7 @@
 name = "Simulator"
 uuid = "7a103a07-b92e-4e08-9609-032240f69494"
 authors = ["Sebastian Rollen <rollenseb@gmail.com>"]
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 Brokerages = "17266b6e-feb9-49b2-89f6-6dff26db6053"

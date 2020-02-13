@@ -19,6 +19,7 @@ export
     process!,
     process_close!,
     process_postclose!,
+    finalize!,
     update_statistics!,
     run!
 
@@ -42,6 +43,7 @@ function run!(s::AbstractStrategy, b::AbstractBrokerage, m::AbstractMarketDataPr
         end
         update_statistics!(s, b, m, params)
     end
+    finalize!(s, b, m, params)
     return params.statistics
 end
 
