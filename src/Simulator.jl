@@ -7,8 +7,7 @@ using Markets:
     is_opening,
     is_open,
     is_closing,
-    is_closed,
-    reset!
+    is_closed
 using TradingBase: AbstractMarketDataProvider
 export
     AbstractStrategy,
@@ -27,7 +26,6 @@ include("strategy.jl")
 include("statistics.jl")
 
 function run!(s::AbstractStrategy, b::AbstractBrokerage, m::AbstractMarketDataProvider)
-    #reset!(m)
     params = initialize!(s, b, m)
     while should_run(s, b, m, params)
         if is_preopen(m)

@@ -11,9 +11,9 @@ version = "0.5.8"
 
 [[Brokerages]]
 deps = ["Markets", "TradingBase", "UUIDs"]
-git-tree-sha1 = "f82f9fb835dde7590e808f656b04d894579a8ac9"
+git-tree-sha1 = "6457a5e13b6096c69693c1dd9e6759b20bcbea6f"
 uuid = "17266b6e-feb9-49b2-89f6-6dff26db6053"
-version = "0.1.8"
+version = "0.2.0"
 
 [[BusinessDays]]
 deps = ["Dates"]
@@ -23,9 +23,9 @@ version = "0.9.6"
 
 [[CSV]]
 deps = ["CategoricalArrays", "DataFrames", "Dates", "FilePathsBase", "Mmap", "Parsers", "PooledArrays", "Tables", "Unicode", "WeakRefStrings"]
-git-tree-sha1 = "fe9b828d5e7b55431d75d6d180ef843d69dea048"
+git-tree-sha1 = "177e58c6965e6a0f544593b490c38a6c267bd8ce"
 uuid = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
-version = "0.5.23"
+version = "0.5.24"
 
 [[CategoricalArrays]]
 deps = ["Compat", "DataAPI", "Future", "JSON", "Missings", "Printf", "Reexport", "Statistics", "Unicode"]
@@ -46,9 +46,9 @@ version = "1.1.0"
 
 [[DataFrames]]
 deps = ["CategoricalArrays", "Compat", "DataAPI", "Future", "InvertedIndices", "IteratorInterfaceExtensions", "Missings", "PooledArrays", "Printf", "REPL", "Reexport", "SortingAlgorithms", "Statistics", "TableTraits", "Tables", "Unicode"]
-git-tree-sha1 = "00136fcd39d503e66ab1b2eab800c47deaf7ca04"
+git-tree-sha1 = "7d5bf815cc0b30253e3486e8ce2b93bf9d0faff6"
 uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
-version = "0.20.0"
+version = "0.20.2"
 
 [[DataStructures]]
 deps = ["InteractiveUtils", "OrderedCollections"]
@@ -135,9 +135,9 @@ uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
 
 [[Markets]]
 deps = ["CSV", "DataFrames", "Dates", "HTTP", "Polygon", "ProgressMeter", "TradingBase"]
-git-tree-sha1 = "cef1da7a2bb5e914573d303164497a1c897aac9c"
+git-tree-sha1 = "afb63bb68f39cbfb483840684d5930940cd812eb"
 uuid = "e289261d-1a32-4d56-985b-5cdfc675b408"
-version = "0.5.1"
+version = "0.5.4"
 
 [[MbedTLS]]
 deps = ["BinaryProvider", "Dates", "Libdl", "Random", "Sockets"]
@@ -171,10 +171,10 @@ deps = ["Dates", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "R
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 
 [[Polygon]]
-deps = ["HTTP", "JSON", "ProgressMeter"]
-git-tree-sha1 = "27d6a52b4ec0dc99f2da232c38f7998743cc33c8"
+deps = ["Dates", "HTTP", "JSON", "ProgressMeter", "TradingBase"]
+git-tree-sha1 = "c13ee8d98ec0fad56bf5e418fc5ebf249b371c93"
 uuid = "6c90dff6-b80f-4bd2-aa9c-319c6ebead32"
-version = "1.0.0"
+version = "2.0.2"
 
 [[PooledArrays]]
 deps = ["DataAPI"]
@@ -241,9 +241,9 @@ version = "1.0.0"
 
 [[Tables]]
 deps = ["DataAPI", "DataValueInterfaces", "IteratorInterfaceExtensions", "LinearAlgebra", "TableTraits", "Test"]
-git-tree-sha1 = "aaed7b3b00248ff6a794375ad6adf30f30ca5591"
+git-tree-sha1 = "22eea0f6619df63954b9404c8d47cd42c5d529f9"
 uuid = "bd369af6-aec1-5ad0-b16a-f7cc5008161c"
-version = "0.2.11"
+version = "1.0.1"
 
 [[Test]]
 deps = ["Distributed", "InteractiveUtils", "Logging", "Random"]
