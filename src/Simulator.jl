@@ -35,34 +35,33 @@ include("statistics.jl")
 
 function sleep_til_preopen(b, m::LiveMarketDataProvider)
     t = get_clock(m)
-    sleep_time = Date(today() + Day(1)) + Time(9)
     sleep_til = Date(today() + Day(1)) + Time(9)
     @info "Sleeping until $sleep_til"
-    sleep(sleep_til - now())
+    sleep(sleep_til - Time(t))
 end
 function sleep_til_opening(b, m::LiveMarketDataProvider)
     t = get_clock(m)
     sleep_til = Time(9, 30)
     @info "Sleeping until $sleep_til"
-    sleep(sleep_til - Time(now()))
+    sleep(sleep_til - Time(t))
 end
 function sleep_til_open(b, m::LiveMarketDataProvider)
     t = get_clock(m)
     sleep_til = Time(9, 35)
     @info "Sleeping until $sleep_til"
-    sleep(sleep_til - Time(now()))
+    sleep(sleep_til - Time(t))
 end
 function sleep_til_closing(b, m::LiveMarketDataProvider)
     t = get_clock(m)
     sleep_til = Time(15, 55)
     @info "Sleeping until $sleep_til"
-    sleep(sleep_til - Time(now()))
+    sleep(sleep_til - Time(t))
 end
 function sleep_til_close(b, m::LiveMarketDataProvider)
     t = get_clock(m)
     sleep_til = Time(16)
     @info "Sleeping until $sleep_til"
-    sleep(sleep_til - Time(now()))
+    sleep(sleep_til - Time(t))
 end
 sleep_til_preopen(b, m::SimulatedMarketDataProvider) = tick!(b)
 sleep_til_opening(b, m::SimulatedMarketDataProvider) = tick!(b)
